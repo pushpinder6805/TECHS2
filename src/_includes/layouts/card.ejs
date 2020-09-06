@@ -1,0 +1,30 @@
+<section class="w-full md:w-2/3 px-3 pt-8 md:py-12">
+  <div class="grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-2">
+    <% list.forEach((post) => { %>
+    <div>
+      <div class="shadow h-full overflow-hidden">
+        <a
+          class="text-gray-800 flex flex-col h-full hover:border-none hover:bg-gray-100"
+          href="<%= post.url.toLowerCase() %>"
+        >
+          <img class="w-full" src="<%= post.data.image %>" alt="Preview <%= post.data.title %>" />
+
+          <div class="px-4 mt-3 mb-4">
+            <h3 class="font-bold text-2xl"><%= post.data.title %></h3>
+
+            <p class="text-gray-500 text-xs mb-2">
+              <%= this.dateFns.format(new Date(post.data.date), 'LLL d, yyyy') %>
+            </p>
+
+            <p class="text-sm">
+              <%= post.data.description %>
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+
+  <% if (pagination) { %> <%- include('pagination.ejs', { pagination }) %> <% } %>
+</section>

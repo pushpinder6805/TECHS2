@@ -1,0 +1,11 @@
+<div class="pt-8 flex justify-center">
+  <% if (pagination.previous) { %>
+  <div class="mx-3">
+    <a href="<%= pagination.previous.replace(/index.html$/, "") %>">← Newer Posts</a>
+  </div>
+  <% } %> <% if (pagination.next) { %>
+  <div class="mx-3">
+    <a href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts →</a>
+  </div>
+  <% } %>
+</div>

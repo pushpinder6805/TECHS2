@@ -1,0 +1,12 @@
+<div class="w-full bg-blue-400">
+  <div class="max-w-screen-xl text-center py-16 px-3 mx-auto">
+    <h1 class="text-4xl text-white font-semibold"><%= locals.title %></h1>
+    <% let subtitle = ''; if (!!locals.tags && locals.tags.includes("_posts")) { subtitle = `By
+    ${site.author} · ${this.dateFns.format(new Date(locals.date), 'LLLL d, yyyy')}`; } else if
+    (locals.subtitle) { subtitle = locals.subtitle; } %> <% if (subtitle) { %>
+    <div class="text-2xl text-gray-200 mt-1">
+      <%= subtitle %>
+    </div>
+    <% } %>
+  </div>
+</div>
