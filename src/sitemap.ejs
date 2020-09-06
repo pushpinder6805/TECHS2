@@ -1,0 +1,18 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% collections.all.forEach((page) => { %>
+  <url>
+    <loc><%= `${site.url}/${this.slugify(page.url.toLowerCase())}` %></loc>
+  </url>
+  <% }) %> <% collections.tagArray.forEach((page) => { %>
+  <url>
+    <loc><%= `${site.url}/category/${this.slugify(page.name.toLowerCase())}/` %></loc>
+  </url>
+  <% }) %>
+</urlset>

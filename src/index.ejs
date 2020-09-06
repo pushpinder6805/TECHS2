@@ -1,0 +1,16 @@
+---
+subtitle: Lorem ipsum dolor sit amet consectetur adipisicing elit
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+pagination:
+  data: collections._posts
+  size: 6
+  alias: list
+  reverse: true
+permalink: '<% if (pagination.pageNumber > 0) { %><%= `page${pagination.pageNumber + 1}/index.html` %><% } else { %>index.html<% } %>'
+eleventyComputed:
+  title: '<% if (pagination.pageNumber > 0) { %><%- `${site.title} | Page ${pagination.pageNumber + 1}` %><% } else { %><%= site.title %><% } %>'
+layout: layouts/main.ejs
+hide_recents_posts: true
+---
+
+<%- include('_includes/layouts/card.ejs', { list, pagination }) %>

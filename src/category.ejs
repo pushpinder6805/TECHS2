@@ -1,0 +1,15 @@
+---
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+pagination:
+  data: collections.tagArray
+  size: 1
+  alias: list
+permalink: '<%= `category/${this.slugify(list.name.toLowerCase())}/index.html` %>'
+eleventyComputed:
+  title: '<%= `Category ${list.name}` %>'
+  subtitle: '<%= `${list.name}` %> lorem ipsum dolor sit amet consectetur adipisicing elit'
+layout: layouts/main.ejs
+eleventyExcludeFromCollections: true
+---
+
+<%- include('_includes/layouts/card.ejs', { list: list.posts, pagination: null }) %>
