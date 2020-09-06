@@ -1,0 +1,133 @@
+@tailwind base;
+
+a {
+  @apply text-blue-600;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-600;
+}
+
+@tailwind components;
+
+.social-icon-light {
+  @apply fill-current text-gray-300;
+}
+
+.social-icon-light:hover {
+  @apply text-gray-500;
+}
+
+.social-icon-dark {
+  @apply fill-current text-gray-800;
+}
+
+.social-icon-dark:hover {
+  @apply text-gray-500;
+}
+
+.icon-sm {
+  @apply w-5 h-5 mr-3;
+}
+
+.icon-base {
+  @apply w-6 h-6;
+}
+
+.btn {
+  @apply text-white py-2 px-4 rounded font-bold bg-blue-600;
+}
+
+.btn:hover {
+  @apply text-gray-200 border-none;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+@tailwind utilities;
+
+.post {
+  @apply leading-8 text-gray-800 text-xl;
+}
+
+.post p {
+  @apply my-5;
+}
+
+.post ul,
+.post ol {
+  @apply overflow-scroll;
+}
+
+.post h1 {
+  @apply text-5xl font-bold mt-12 mb-5 leading-10;
+}
+
+.post h2 {
+  @apply text-4xl font-bold mt-10 mb-5;
+}
+
+.post h3 {
+  @apply text-3xl font-bold mt-10 mb-5;
+}
+
+.post h4 {
+  @apply text-2xl font-bold mt-10 mb-5;
+}
+
+.post h5 {
+  @apply text-xl font-bold mt-10 mb-5;
+}
+
+.post h6 {
+  @apply text-lg font-bold mt-10 mb-5;
+}
+
+.post > ul,
+.post > ol {
+  @apply my-8;
+}
+
+.post ul,
+.post ol {
+  @apply pl-8;
+}
+
+.post ul {
+  @apply list-outside list-disc;
+}
+
+.post ol {
+  @apply list-outside list-decimal;
+}
+
+.post blockquote p {
+  @apply pl-4 py-2 border-l-4 border-blue-600 bg-gray-200;
+}
+
+.post img {
+  @apply rounded-md;
+}
+
+.post pre[class*='language-'] {
+  @apply my-8;
+}
+
+.post hr {
+  @apply my-8;
+}
+
+.post table {
+  @apply mt-8 mb-6 w-full border-collapse block overflow-scroll pb-2;
+}
+
+.post table th,
+.post table td {
+  @apply border px-8 py-4;
+}
+
+.post table th {
+  @apply bg-gray-200 text-left;
+}
